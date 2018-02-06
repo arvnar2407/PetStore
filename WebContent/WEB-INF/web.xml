@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+  <display-name>Final</display-name>
+  <welcome-file-list>
+    <welcome-file>/pages/Home.jsp</welcome-file>
+    
+  </welcome-file-list>
+  <servlet>
+  <servlet-name>MvcController</servlet-name>
+  <servlet-class>com.nttdata.mvc.MvcController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>MvcController</servlet-name>
+  <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+    <resource-ref>
+  <description>DB Connection</description>
+  <res-ref-name>jdbc/MyDB</res-ref-name>
+  <res-type>javax.sql.DataSource</res-type>
+  <res-auth>Container</res-auth>
+  </resource-ref>
+  <listener>
+  <listener-class>com.nttdata.petstore.web.handlers.MyListenerClass</listener-class> 
+  </listener>
+</web-app>
